@@ -33,10 +33,23 @@
    <div class="game">
   <?php foreach ($all as $game) : ?>
       <div class="info">
+      <?= csrf_field() ?>
         <h2 class="name"><?= $game->name ?></h2>
         <p><iframe width="250" height="140" src="<?= $game->url ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
         <p><?= $game->description ?></p>
         <p><?= $game->date ?></p>
+        <div class="la">
+          <form action="/YT/update?id=<?= $game->id ?>">
+            <?= csrf_field() ?>
+            <a href="/YT/update?id=<?= $game->id ?>">update</a>
+          </form>
+
+          <form action="/YT/delete" method="post">
+          <?= csrf_field() ?>
+            <input type="hidden" name="id" value="<?= $game->id ?>">
+            <input type="submit" value="delete" name="delete">
+          </form>
+        </div>
       </div>
     
   <?php endforeach; ?>

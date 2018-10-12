@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get("YT/wrapper", "YTController@ShowAll");
-
+Route::get("YT/update", "YTController@update");
 Route::post("YT/wrapper", "YTController@insert");
+Route::post("YT/delete", "YTController@delete");

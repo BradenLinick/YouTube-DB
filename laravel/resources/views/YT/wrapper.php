@@ -31,6 +31,9 @@
     .nav form {
       padding-left: 2rem;
     }
+    .nav form input {
+      margin-right: .5rem;
+    }
     .game {
       display: flex;
       flex-flow: row wrap;
@@ -64,7 +67,19 @@
       margin-top: 1rem;
       color: white;
     }
-
+    .la {
+      display: flex;
+    }
+    .la form{
+      margin: .5rem;
+    }
+    .la a {
+      text-decoration: none;
+      border: 1px solid black;
+      border-radius: 5rem;
+      padding: .4rem;
+      color: darkblue;
+    }
   </style>
     <nav>
     <div class="nav">
