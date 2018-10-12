@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("YT/wrapper", "YTController@ShowAll");
+
+Route::post("YT/wrapper", "YTController@insert");
